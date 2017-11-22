@@ -1,0 +1,64 @@
+.hexagon-popup-container {
+
+  $width: 800px;
+  .overlay {
+    background: url('../assets/images/static/Background_blur.jpg');
+  }
+  .hexagon-popup {
+    position: absolute;
+    width: $width;
+    height: 0.88 * $width;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  iframe {
+    background: black;
+  }
+  .iframe-wrapper {
+    height: 100%;
+    width: 100%;
+    @include hexagon();
+  }
+  .swipe-instruction {
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .swipe-instruction.fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+  }
+  .swipe-instruction.fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+  }
+  .popup-content {
+    width: 100%;
+    height: 100%;
+  }
+  .back-button {
+    $displaySize: 100px;
+    $positionAjustment: 30px;
+    position: absolute;
+    background: url('../assets/images/static/circle-close-button.png') no-repeat;
+    background-position: $positionAjustment $positionAjustment;
+    background-size: $displaySize;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    top: calc(100% - #{$displaySize/2} - #{$positionAjustment});
+    left: calc(75% - #{$displaySize/2} - #{$positionAjustment});
+    transform-origin: $displaySize/2 $displaySize/2;
+    transition-duration: 0.1s;
+
+  }
+  .back-button:active {
+    transform: scale(1.1);
+  }
+}

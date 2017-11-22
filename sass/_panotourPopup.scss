@@ -1,0 +1,38 @@
+.panotour-popup {
+  .popup-content {
+    background-color: black;
+  }
+  // .back-button {
+  //   position: absolute;
+  //   background-image: url('../assets/images/static/btnBackground.png');
+  //   background-size: 100% 100%;
+  //   font-size: 30px;
+  //   color: white;
+  //   bottom: 200px;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: 150px;
+  //   height: 90px;
+  //   text-align: center;
+  //   line-height: 90px;
+  //   cursor: pointer;
+  // }
+
+  .back-button {
+    position: absolute;
+    background-image: url('../assets/images/static/circle-close-button.png');
+    background-size: 100% 100%;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    bottom: 200px;
+    left: calc(50% - 35px);
+
+    transition-duration: 0.1s;
+    transform-origin: center;
+  }
+  .back-button:active {
+    transform: scale(1.1) ;
+
+  }
+}

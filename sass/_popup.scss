@@ -1,0 +1,47 @@
+.rectangle-popup-container {
+  background-color: black;
+
+  // .overlay {
+  //   background: url('../assets/images/static/Background_blur.jpg');
+  // }
+
+  .rectangle-popup {
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .popup-content {
+    width: 100%;
+    height: 100%;
+  }
+  // .close-button {
+  //     color: white;
+  //     font: 32px/100% arial, sans-serif;
+  //     position: absolute;
+  //     right: 5px;
+  //     text-decoration: none;
+  //     text-shadow: 0 1px 0 #aaa;
+  //     top: 5px;
+  //     transition-duration: 0.1s;
+  // }
+
+  .close-button {
+    position: absolute;
+    background-image: url('../assets/images/static/circle-close-button.png');
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    bottom: 25px;
+    right: 30px;
+    transition-duration: 0.1s;
+  }
+  .close-button:active {
+    transform: scale(1.1);
+    transform-origin: center;
+  }
+
+}

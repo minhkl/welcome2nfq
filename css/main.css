@@ -1,0 +1,247 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+body {
+  font-family: Tahoma,Helvetica,Arial,Verdana,sans-serif;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+h1 {
+  font-family: Tahoma,Helvetica,Arial,Verdana,sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  margin: 20px auto; }
+
+.brand {
+  color: #ff5f04; }
+
+.root {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+.fullscreen, .popup-container, .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; }
+
+.popup-container {
+  position: fixed;
+  z-index: 99999;
+  display: none; }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.check {
+  position: absolute;
+  pointer-events: none;
+  width: 1280px;
+  height: 720px;
+  z-index: 999999;
+  top: 180px;
+  left: 320px;
+  border: 1px dashed yellow; }
+
+.rectangle-popup-container {
+  background-color: black; }
+  .rectangle-popup-container .rectangle-popup {
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .rectangle-popup-container .popup-content {
+    width: 100%;
+    height: 100%; }
+  .rectangle-popup-container .close-button {
+    position: absolute;
+    background-image: url("../assets/images/static/circle-close-button.png");
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    bottom: 25px;
+    right: 30px;
+    transition-duration: 0.1s; }
+  .rectangle-popup-container .close-button:active {
+    transform: scale(1.1);
+    transform-origin: center; }
+
+.panotour-popup .popup-content {
+  background-color: black; }
+.panotour-popup .back-button {
+  position: absolute;
+  background-image: url("../assets/images/static/circle-close-button.png");
+  background-size: 100% 100%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  bottom: 200px;
+  left: calc(50% - 35px);
+  transition-duration: 0.1s;
+  transform-origin: center; }
+.panotour-popup .back-button:active {
+  transform: scale(1.1); }
+
+.hexagon-popup-container .overlay {
+  background: url("../assets/images/static/Background_blur.jpg"); }
+.hexagon-popup-container .hexagon-popup {
+  position: absolute;
+  width: 800px;
+  height: 704px;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%); }
+.hexagon-popup-container iframe {
+  background: black; }
+.hexagon-popup-container .iframe-wrapper {
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
+.hexagon-popup-container .swipe-instruction {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); }
+.hexagon-popup-container .swipe-instruction.fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear; }
+.hexagon-popup-container .swipe-instruction.fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear; }
+.hexagon-popup-container .popup-content {
+  width: 100%;
+  height: 100%; }
+.hexagon-popup-container .back-button {
+  position: absolute;
+  background: url("../assets/images/static/circle-close-button.png") no-repeat;
+  background-position: 30px 30px;
+  background-size: 100px;
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+  top: calc(100% - 50px - 30px);
+  left: calc(75% - 50px - 30px);
+  transform-origin: 50px 50px;
+  transition-duration: 0.1s; }
+.hexagon-popup-container .back-button:active {
+  transform: scale(1.1); }
+
+.store-thumbnail {
+  display: inline-block; }
+  .store-thumbnail + .store-thumbnail {
+    margin-left: 70px; }
+  .store-thumbnail .store-thumbnail-image-wrapper {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 200px;
+    height: 176px;
+    background-color: #ff5f04;
+    transition-duration: 0.1s;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
+  .store-thumbnail .store-thumbnail-image-wrapper:active {
+    transform-origin: center;
+    transform: scale(1.1); }
+  .store-thumbnail .store-thumbnail-image {
+    display: block;
+    margin-top: 6px;
+    margin-left: 6px;
+    height: calc(100% - 12px);
+    width: calc(100% - 12px);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
+  .store-thumbnail .thumbnail-caption {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px; }
+
+#mainPage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/nfqbackground.jpg");
+  background-size: 100% 100%; }
+  #mainPage .main-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  #mainPage .main-area-handle-touch {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  #mainPage .main-page-video {
+    position: relative;
+    width: 640px;
+    height: 360px;
+    left: 50%;
+    transform: translateX(-50%); }
+  #mainPage .title {
+    margin-top: 40px;
+    text-shadow: 0 0 40px black; }
+  #mainPage .store-thumbnail-container {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%; }
+
+/*# sourceMappingURL=main.css.map */

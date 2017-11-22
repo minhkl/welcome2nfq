@@ -1,0 +1,39 @@
+.store-thumbnail {
+  display: inline-block;
+  & + & {
+    margin-left: 70px
+  };
+
+  .store-thumbnail-image-wrapper {
+    $width: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: $width;
+    height: $width * 0.88;
+    background-color: rgb(255, 95, 4);
+    transition-duration: 0.1s;
+    @include hexagon();
+  }
+  .store-thumbnail-image-wrapper:active {
+    transform-origin:center;
+    transform: scale(1.1);
+
+  }
+
+  .store-thumbnail-image {
+    $borderWidth: 6px;
+    display: block;
+    margin-top: $borderWidth;
+    margin-left: $borderWidth;
+    height: calc(100% - #{2 * $borderWidth});
+    width: calc(100% - #{2 * $borderWidth});
+    @include hexagon();
+  }
+  .thumbnail-caption {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}

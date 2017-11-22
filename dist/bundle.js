@@ -10427,13 +10427,13 @@ const DUMMY_DATA = [{
   category: 'teamBuilding',
   title: 'Team Building',
   image: 'assets/images/thumbnails/teamBuilding.jpg',
-  numberOfPicture: 4
+  numberOfPicture: 44
 }, {
 
   category: 'birthday',
   title: 'Birthday',
   image: 'assets/images/thumbnails/birthday.jpg',
-  numberOfPicture: 17
+  numberOfPicture: 27
 }, {
 
   category: 'rockstars',

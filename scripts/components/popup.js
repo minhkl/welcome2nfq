@@ -18,6 +18,7 @@ export default class Popup extends PopupBase {
 
     this._view = $(HTML)
     this._view.find('.close-button').on('click', this.hide.bind(this))
+    this._view.find('.close-button').on('touchstart', this.hide.bind(this))
 
     this._iframe = this._view.find('.popup-content')
     this.setupIframeEvent()

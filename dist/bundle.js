@@ -10843,6 +10843,7 @@ class Popup extends __WEBPACK_IMPORTED_MODULE_1__popupBase_js__["a" /* default *
 
     this._view = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(HTML);
     this._view.find('.close-button').on('click', this.hide.bind(this));
+    this._view.find('.close-button').on('touchstart', this.hide.bind(this));
 
     this._iframe = this._view.find('.popup-content');
     this.setupIframeEvent();

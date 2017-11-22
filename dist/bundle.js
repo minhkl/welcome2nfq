@@ -10364,7 +10364,12 @@ class PopupBase {
     this._iframe.attr('src', src);
   }
   setIframeContent(html) {
-    this._iframe[0].srcdoc = html;
+    if (html == null) {
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this._iframe).removeAttr('srcdoc');
+    } else {
+      this._iframe[0].srcdoc = html;
+    }
+
     // const document = this._iframe[0].contentWindow.document
     // document.open()
     // document.write(html)
@@ -10393,6 +10398,7 @@ class PopupBase {
   cleanUp() {
     this.unbindEvents(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this._iframe[0].contentDocument));
     this.setIframSrc('');
+    this.setIframeContent(null);
   }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = PopupBase;

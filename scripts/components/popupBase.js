@@ -36,7 +36,13 @@ export default class PopupBase {
     this._iframe.attr('src', src)
   }
   setIframeContent(html) {
+    if (html == null) {
+      $(this._iframe).removeAttr('srcdoc')
+    } else {
     this._iframe[0].srcdoc = html
+    }
+
+
     // const document = this._iframe[0].contentWindow.document
     // document.open()
     // document.write(html)
@@ -65,5 +71,6 @@ export default class PopupBase {
   cleanUp() {
     this.unbindEvents($(this._iframe[0].contentDocument))
     this.setIframSrc('')
+    this.setIframeContent(null)
   }
 }
